@@ -1,0 +1,66 @@
+.artists__section {
+	padding: 1rem 2rem;
+	h1 {
+		font-family: 'Krona';
+		font-size: 2rem;
+		text-align: center;
+	}
+
+	.artists__container {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		justify-content: center;
+		align-items: center;
+		gap: 3rem;
+		margin-top: 2rem;
+	}
+
+	.article__card {
+		height: 17rem;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+
+		&:hover {
+			img {
+				filter: brightness(0.8);
+			}
+		}
+
+		img {
+			height: 100%;
+			object-fit: cover;
+			object-position: top;
+			border-radius: 0.7rem;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			filter: brightness(0.7) grayscale(1);
+         transition: all 1s ease;
+		}
+
+		p {
+			font-family: 'Krona';
+			padding: 0.6rem 1.3rem;
+			backdrop-filter: blur(10px);
+
+			background: linear-gradient(to right, #ffffff73, #ffffff1d);
+			box-shadow: 0.3rem 0.7rem 1rem #17171798;
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+   .artists__section {
+      padding: 3rem 1rem 2rem;
+		h1 {
+			font-size: 1.4rem;
+		}
+      .artists__container {
+        grid-template-columns: 1fr;
+      }
+   }
+}

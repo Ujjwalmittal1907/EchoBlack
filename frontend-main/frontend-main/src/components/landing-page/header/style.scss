@@ -1,0 +1,151 @@
+.top__nav {
+	height: 10vh;
+	width: 100vw;
+	position: fixed;
+	left: 0;
+	top: 0%;
+	background-color: transparent;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2.5rem;
+	z-index: 10;
+	
+	&.scrolled {
+		background-color: #1e1e1e;
+		box-shadow: 0 1.5rem 1rem #18181847;
+
+
+
+	}
+
+	.logo__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.2rem;
+
+		p {
+			font-family: 'Inter';
+			font-size: 0.9rem;
+			color: #fff;
+		}
+	}
+
+	img {
+		width: 2rem;
+	}
+	.hidden {
+		display: block;
+	}
+
+	& > .links {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1.8rem;
+		justify-self: center;
+
+		& a {
+			text-decoration: none;
+			display: block;
+			color: #fff;
+			font-weight: 500;
+			font-size: 0.9rem;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	& > a {
+		width: 8rem;
+		height: 2.5rem;
+		border-radius: 0.4rem;
+		background-color: transparent;
+		border: 2px solid #d4d4db;
+		color: #ffffff;
+		font-weight: 600;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+		font-size: 0.9rem;
+		gap: 0.5rem;
+
+		backdrop-filter: blur(10px);
+
+		background: linear-gradient(to right, #ffffff73, #ffffff1d);
+
+		img {
+			width: 1.2rem;
+		}
+	}
+
+	.menu__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: transparent;
+		border: none;
+		opacity: 0.6;
+		display: none;
+
+		img {
+			filter: invert(1) brightness(200);
+			height: 90%;
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.top__nav {
+		padding: 0 1.5rem;
+		position: fixed;
+		background-color: #1e1e1e;
+		box-shadow: 0 1.5rem 1rem #18181847;
+		& > .links {
+			border-radius: 0 0 0.3rem 0.3rem;
+			position: absolute;
+			z-index: 10;
+			flex-direction: column;
+			top: 10vh;
+			width: 100%;
+			background-color: #1e1e1e;
+			left: 50%;
+			transform: translateX(-50%);
+			gap: 0;
+			box-shadow: 0 1.5rem 1rem #18181847;
+
+			a {
+				border-top: 1px solid #272727;
+				width: 100%;
+				text-align: center;
+				padding: 1.4rem;
+			}
+		}
+		.hidden {
+			display: none;
+		}
+
+		.logo__container {
+			gap: 0;
+
+			p {
+				font-size: 0.8rem;
+			}
+		}
+
+		img {
+			width: 1.8rem;
+		}
+
+		& > a {
+			display: none;
+		}
+		.menu__btn {
+			display: block;
+		}
+	}
+}

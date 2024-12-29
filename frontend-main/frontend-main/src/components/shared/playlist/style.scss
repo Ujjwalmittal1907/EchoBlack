@@ -1,0 +1,82 @@
+.playlist__card {
+   border-radius: 0.5rem;
+   overflow: hidden;
+   background-color: #1b1b1bf6;
+   padding: 0.9rem;
+   width: 100%;
+
+   .img__container {
+      height: 17rem;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .music__image {
+         border-radius: 0.4rem;
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+
+      .play__btn {
+         $size: 4.5rem;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 1.2rem;
+         width: $size;
+         height: $size;
+         border-radius: 50%;
+         position: absolute;
+         border: none;
+         backdrop-filter: blur(10px);
+      
+         background: linear-gradient(
+            to right,
+            #ffffff73,
+            #ffffff1d
+         );
+
+         img {
+            position: relative;
+            left: 0.3rem;
+            width: 100%;
+            height: 100%;
+            filter: invert(.3);
+         }
+      }
+   }
+
+   .card__details {
+      padding: 1rem 0 0;
+     h3 {
+      font-family: "Inter";
+      font-size: 1.1rem;
+      color: #9f9f9f;
+     }
+     .card__metrics {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: .4rem 0;
+       margin: 1.2rem 0 0;
+       border-top: 1px solid #8080803c;
+
+       span {
+         color: gray;
+         font-size: .8rem;
+
+       }
+       p {
+         font-weight: bold;
+         color: #9f9f9f;
+       }
+     }
+   }
+
+
+}

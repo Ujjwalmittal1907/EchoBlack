@@ -1,0 +1,65 @@
+.genere__section {
+	padding: 1rem 2rem;
+	margin-bottom: 3rem;
+	h1 {
+		font-family: 'Krona';
+		font-size: 2rem;
+		text-align: center;
+	}
+
+	.genres__container {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		justify-content: center;
+		align-items: center;
+		gap: 3rem;
+		margin-top: 2rem;
+	}
+
+	.genres__card {
+		height: 17rem;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:hover {
+			img {
+				filter: brightness(0.8);
+			}
+		}
+
+		img {
+			height: 100%;
+			object-fit: cover;
+			object-position: top;
+			border-radius: 0.7rem;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			filter: brightness(0.6);
+		}
+
+		p {
+			font-family: 'Krona';
+			padding: 0.6rem 1.3rem;
+			backdrop-filter: blur(10px);
+
+			background: linear-gradient(to right, #ffffff73, #ffffff1d);
+			box-shadow: 0.3rem 0.7rem 1rem #17171798;
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.genere__section {
+		h1 {
+			font-size: 1.4rem;
+		}
+
+      .genres__container {
+        grid-template-columns: 1fr;
+      }
+	}
+}

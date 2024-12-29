@@ -1,0 +1,42 @@
+.auth__page {
+	position: relative;
+	height: 100vh;
+	padding: 20vh 0 0;
+	h1 {
+		font-family: 'Krona';
+		font-size: 2.7rem;
+		text-align: center;
+	}
+
+	& > div {
+      margin-bottom: 3rem;
+		p {
+			font-family: 'Krona';
+			font-size: 1.2rem;
+			text-align: center;
+         width: 50%;
+         min-width: 22rem;
+         margin: 1rem auto;
+		}
+
+		button {
+			text-align: center;
+			padding: 1.2rem 4rem;
+			font-family: 'Krona';
+			font-size: 1.4rem;
+			text-align: center;
+			border-radius: 1rem;
+			background-color: white;
+			border: none;
+         color: black;
+         margin: 2rem auto;
+		}
+	}
+
+	footer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		left: 0;
+	}
+}

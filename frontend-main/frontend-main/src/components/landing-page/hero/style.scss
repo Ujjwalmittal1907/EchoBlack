@@ -1,0 +1,144 @@
+.hero__section {
+	height: 100dvh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2rem;
+	position: relative;
+
+	& > div {
+		width: 50%;
+		z-index: 1;
+	}
+
+	.hero__bg {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		object-position: center 20%;
+		filter: brightness(0.3);
+		left: 0;
+		top: 0;
+	}
+
+	.hero__details {
+		h1 {
+			font-family: 'Krona';
+			font-size: 2.8rem;
+		}
+		p {
+			font-size: 1.1rem;
+			margin: 1rem 0 2rem;
+		}
+
+		button {
+			border: 1px solid white;
+			border-radius: 0.5rem;
+			padding: 0.5rem 2rem;
+			background-color: transparent;
+			font-size: 1.2rem;
+			font-weight: bold;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 0.5rem;
+
+			backdrop-filter: blur(10px);
+
+			background: linear-gradient(to right, #ffffff73, #ffffff1d);
+
+			img {
+				width: 2rem;
+			}
+		}
+	}
+
+	.hero__img {
+		width: 60%;
+		height: 87%;
+		position: relative;
+
+		.mobile {
+			right: 4rem;
+		}
+	}
+
+	.hero__img__container {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		height: 100%;
+		right: 3rem;
+		top: 2rem;
+		position: relative;
+
+		img {
+			position: absolute;
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.hero__section {
+		// padding: 0 1rem;
+		flex-direction: column;
+
+		& > div {
+			width: 100%;
+			height: 50%;
+		}
+
+		.hero__details {
+			order: 2;
+
+			h1 {
+				font-size: 1.4rem;
+				text-align: center;
+			}
+
+			p {
+				font-size: 0.9rem;
+				margin: 0.4rem 0 1.2rem;
+				text-align: justify;
+				text-align-last: center;
+				display: none;
+			}
+			button {
+				margin: 1.5rem auto;
+				font-size: 0.9rem;
+				padding: 0.9rem 2.3rem;
+
+				img {
+					width: 1rem;
+				}
+			}
+		}
+
+		.hero__img {
+			width: 100%;
+			height: 80%;
+
+			.mobile {
+				height: 69%;
+				left: 40%;
+			}
+		}
+
+		.hero__img__container {
+			position: relative;
+			top: 10vh;
+			left: 0;
+			display: block;
+
+			img {
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				width: unset;
+				height: 100%;
+			}
+		}
+	}
+}

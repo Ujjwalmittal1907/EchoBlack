@@ -1,0 +1,40 @@
+.stacks__section {
+   padding: 3rem 2rem 1rem;
+   h1 {
+      font-family: "Krona";
+      font-size: 2rem;
+      text-align: center;
+   }
+
+   .stacks__icons {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 8rem;
+     padding: 4rem 0 2rem;
+
+     img {
+      height: 6rem;
+     }
+   }
+}
+
+@media screen and (max-width: 900px) { 
+   .stacks__section {
+		padding: 0rem 1rem 2rem;
+     
+      h1 {
+         font-size: 1.4rem;
+      }
+
+      .stacks__icons {
+         padding: 2rem 0;
+        gap: 2rem;
+
+        img {
+         height: unset;
+         width: 4rem;
+        }
+      }
+   }
+}
